@@ -32,6 +32,25 @@ document.getElementById("cashout-btn").addEventListener("click", function(){
         //5-1  true hole show alert and set new blanace
         alert ("Cashout successful");
         setBalance(newBalance); //machine thk function k call krlam r kon value set hobe seta just pass kore dilam.
+
+        // add transection history 
+
+        //1. history-container k dhore niye ashbo
+        const history = document.getElementById("history-container");
+
+        //2. new div create krbo
+        const newHistory = document.createElement("div");
+
+        //3. new div e innerHtML add krbo
+        newHistory.innerHTML = `
+        <div class="transection-card p-5 bg-base-200">
+                Cashout ${cashoutAmount} TAKA Success to ${cashoutNumber}, at ${new Date()}
+
+
+            </div>
+        `
+        //4. history-container e new div k append krbo
+        history.append(newHistory);
        }
        else{
         //5-2 false hole show error alert and return

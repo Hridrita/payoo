@@ -23,3 +23,24 @@ function setBalance(value){
     const balanceElement = document.getElementById("balance");
     balanceElement.innerText = value ;
 }
+
+
+//id nibe then sobaik hide krbe..jake chai tkey show krbe
+
+function showOnly(id){
+    
+     const addmoney = document.getElementById("add-money");
+     const cashout = document.getElementById("cashout");
+     const history = document.getElementById("history");
+
+     // console.log(`add Money- ${addmoney}, Cashout- ${cashout}`);
+     //sobai k hide kore dao
+
+     addmoney.classList.add("hidden");
+     cashout.classList.add("hidden");
+     history.classList.add("hidden");
+
+     //id wala element ta k show koro
+     const selected = document.getElementById(id);
+     selected.classList.remove("hidden");
+}

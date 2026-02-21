@@ -54,12 +54,12 @@
         <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
 
         <div class="buttons grid grid-cols-3 gap-3">
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">  <!--ei btn use krle by default sob flex hoye jay tai pore flex ta chng kore flex-cols kore dilam r height full kore dilam sathe upor niche padding 20 px -->
+            <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">  <!--ei btn use krle by default sob flex hoye jay tai pore flex ta chng kore flex-cols kore dilam r height full kore dilam sathe upor niche padding 20 px -->
                 <img src="assets/opt-1.png"> 
                 <p>Add Money</p>
             </button>
 
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">  
+            <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">  
                 <img src="assets/opt-2.png"> 
                 <p>Cashout</p>
             </button>
@@ -80,7 +80,7 @@
                 <p>Pay Bill <br> 402 x 194.5</p>
             </button>
 
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">  
+            <button onclick="showOnly('history')" class="btn flex-col h-full py-4 btn-primary btn-soft">  
                 <img src="assets/opt-6.png"> 
                 <p>Transections</p>
             </button>
@@ -91,7 +91,7 @@
 
     <!--add money form-->
 
-    <section id="add-money" class="w-11/12 mx-auto py-5">
+    <section id="add-money" class="w-11/12 mx-auto py-5 hidden">
         <h2 class="text-xl font-bold mb-5">Add Money</h2>
         <div class="card bg-base-100 w-full  shadow  rounded-2xl">
       <div class="card-body">
@@ -130,7 +130,7 @@
 
     <!--cashout form-->
 
-    <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
+    <section id="cashout" class="w-11/12 mx-auto py-5 ">
         <h2 class="text-xl font-bold mb-5">Cashout</h2>
         <div class="card bg-base-100 w-full  shadow  rounded-2xl">
       <div class="card-body">
@@ -155,6 +155,21 @@
     </div>
 
     </section>
+
+    <!--transection histoey-->
+
+    <section id="history" class="w-11/12 mx-auto py-5">
+        <h2 class="text-xl font-bold mb-5">Transection History</h2>
+        <div class="" id="history-container">
+            <div class="transection-card p-5 bg-base-200 space-y-5">
+           
+            </div>
+        </div>
+
+
+    </section>
+
+   
 
 
     <script src="script/machine.js"></script>
