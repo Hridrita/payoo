@@ -19,13 +19,14 @@ document.getElementById("add-money-btn").addEventListener("click" , function(){
 
     //3. get amount
     const amount = getValueFromInput("add-money-amount");
-    const newBalance = getBalance() + Number(amount);
+    const currentBalance = getBalance();
+    const newBalance = currentBalance + Number(amount);
     console.log(newBalance) ;
 
     const pin = getValueFromInput("add-money-pin");
     if (pin === "1234"){
-        alert("Add money success");
-        setBalance(newBalance); //called set balal
+        alert(`Add Money Success ${bankAccount} at ${new Date()}`);  //tilt er vitor string and variable duitai use kora jay..variable use krte hole tar agey doller sign use krte hobe then curly braces er vitor variable...ekhne date oo use kora hoyeche...eta krle jeidin add money krbo seidin er date e dekhabe
+        setBalance(newBalance); //called set balance funtion from achine 
     }
     else{
         alert("Invalid Pin");
