@@ -1,7 +1,9 @@
+//optimized code
+
 document.getElementById("cashout-btn").addEventListener("click", function(){
     //1. get the agent number and validate  
     const cashoutNumber = getValueFromInput("cashout-number");
-    //    console.log(cashoutNumber);
+        console.log(cashoutNumber);
 
        if (cashoutNumber.length != 11){
         alert("Inavlid Cashout Number");
@@ -10,16 +12,14 @@ document.getElementById("cashout-btn").addEventListener("click", function(){
 
        //2. get the amount, validate , convert to number
        const cashoutAmount = getValueFromInput("cashout-amount");
-    //    console.log(cashoutAmount);
+       console.log(cashoutAmount);
 
        //3. get the current balcnce, validate , convert to number
-       const balanceElement = document.getElementById("balance");
-       const balance = balanceElement.innerText;
-    //    console.log(balance);
+       const currentBalance = getBalance(); //machine thk just function ta call krlam
 
        //4. calculate new balance
-       const newBalance = Number(balance) - Number(cashoutAmount);
-    //    console.log(newBalance);
+       const newBalance = currentBalance - Number(cashoutAmount);
+       console.log(newBalance);
 
        if (newBalance < 0){
         alert ("Invalid Amount");
@@ -31,7 +31,7 @@ document.getElementById("cashout-btn").addEventListener("click", function(){
        if (pin === "1234"){
         //5-1  true hole show alert and set new blanace
         alert ("Cashout successful");
-        balanceElement.innerText = newBalance;
+        setBalance(newBalance); //machine thk function k call krlam r kon value set hobe seta just pass kore dilam.
        }
        else{
         //5-2 false hole show error alert and return
@@ -46,7 +46,7 @@ document.getElementById("cashout-btn").addEventListener("click", function(){
 
 
 
-
+//not optimized code
 
 
 // document.getElementById("cashout-btn").addEventListener("click", function(){
